@@ -6,7 +6,7 @@
 |Gantt Chart | |
 | Design Prototype | |	
 | Style Guide	| |
-| Kanban Board | https://github.com/users/andjhay/projects/2 |	
+| Kanban Board | https://trello.com/b/iIjrDqUZ/semester-project-2 |	
 | Repository | https://github.com/andjhay/Auction-Site-Semester-Project-2 |
 | Hosted Demo	| |
 
