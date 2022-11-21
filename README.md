@@ -8,7 +8,7 @@
 | Style Guide	| https://xd.adobe.com/view/572ab52d-9595-4e90-829c-f36b6d78d90b-0279/ |
 | Kanban Board | https://trello.com/b/iIjrDqUZ/semester-project-2 |	
 | Repository | https://github.com/andjhay/Auction-Site-Semester-Project-2 |
-| Hosted Demo	| |
+| Hosted Demo	| https://andjhay.github.io/Auction-Site-Semester-Project-2/ |
 
 ## CSS frameworks
 Bootstrap
