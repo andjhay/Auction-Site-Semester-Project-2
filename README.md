@@ -20,4 +20,4 @@ GitHub Pages
 Adobe XD
 
 ## Planning applications
-GitHub Projects
+Trello(Kanban) and TeamGantt (Gantt) a Trello Power-Up feature
