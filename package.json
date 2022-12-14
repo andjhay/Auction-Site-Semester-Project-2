@@ -7,9 +7,7 @@
   "scripts": {
     "test": "test",
     "build": "sass scss:css",
-    "watch": "sass --watch scss:css & live-server",
-    "lint": "eslint *.mjs",
-    "lint-fix": "eslint *.mjs --cache --fix"
+    "watch": "sass --watch scss:css & live-server"
   },
   "repository": {
     "type": "git",
@@ -29,7 +27,6 @@
     "bootstrap": "^5.2.3"
   },
   "devDependencies": {
-    "eslint": "^8.28.0",
     "live-server": "^1.2.2",
     "sass": "^1.56.1"
   }
