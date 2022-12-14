@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>World Auction - Home</title>
+    <title>World Auction - Register</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/main_pages/main.mjs" defer type="module"></script>
@@ -73,11 +73,72 @@
     </header>
 
     <main>
-      <div class="text-center">
-        <h1 class="my-5">Welcome to World Auction</h1>
-        <div class="container w-50">
-          <img class="img-fluid rounded-5" src="./img/pexels-giallo-859895.jpg" />
-        </div>
+      <div class="form w-100 m-auto">
+        <form id="registerForm">
+          <h1 class="mb-3 fw-normal text-center">Register</h1>
+          <div class="form-floating">
+            <input
+              type="text"
+              name="name"
+              class="form-control top"
+              id="name"
+              placeholder="Name"
+              required
+              pattern="^[\w]+$"
+              title="Name must only include upper and lowercase letters example: John Smith"
+            />
+            <label for="name">Name (required)</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="email"
+              name="email"
+              class="form-control mid"
+              id="email"
+              placeholder="name@stud.noroff.no"
+              required
+              pattern="^[\w\-.]+@(stud.)?noroff.no$"
+              title="Email must be a @noroff.no or @stud.noroff.no address"
+            />
+            <label for="email">Email address (required)</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              name="password"
+              class="form-control mid"
+              id="password"
+              placeholder="Password"
+              required
+              minlength="8"
+              title="Must be at least 8 characters long"
+            />
+            <label for="password">Password (required)</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="url"
+              name="banner"
+              class="form-control mid"
+              id="banner"
+              placeholder="Banner"
+              title="Must be a URL to image file with https://"
+            />
+            <label for="banner">Banner</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="url"
+              name="avatar"
+              class="form-control bottom"
+              id="avatar"
+              placeholder="Avatar"
+              title="Must be a URL to image file with https://"
+            />
+            <label for="avatar">Avatar</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary">Create Account</button>
+        </form>
       </div>
     </main>
 

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>World Auction - Home</title>
+    <title>World Auction -</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/main_pages/main.mjs" defer type="module"></script>
+    <script src="js/main_pages/profile.mjs" defer type="module"></script>
   </head>
 
   <body class="d-flex flex-column min-vh-100">
@@ -72,11 +73,40 @@
       </div>
     </header>
 
-    <main>
-      <div class="text-center">
-        <h1 class="my-5">Welcome to World Auction</h1>
-        <div class="container w-50">
-          <img class="img-fluid rounded-5" src="./img/pexels-giallo-859895.jpg" />
+    <main class="text-center">
+      <div class="container p-5">
+        <h2 id="userName" class="pb-2 border-bottom">Profile: </h2>
+
+        <div class="row row-cols-lg-2 g-4 py-5">
+          <div id="profilePictureDiv">
+            <img id="profilePicture" class="img-fluid rounded-4" />
+            <div id="updateAvatar" class="form w-100 m-auto"></div>
+          </div>
+
+          <div class="rounded-4 shadow-lg">
+            <div id="userDetails" class="text-start h-100 p-5 pb-3"></div>
+          </div>
+        </div>
+
+        <button
+          id="createNew"
+          class="btn btn-secondary mb-4 d-none"
+          onclick="location.href=`create_edit.html?page=create`;"
+        >
+          Create New Listing
+        </button>
+
+        <div class="container">
+          <h2 class="pb-2 border-bottom">Users Listings</h2>
+          <div id="listListings" class="row row-cols-2 row-cols-lg-4 justify-content-center"></div>
+        </div>
+
+        <div id="bidsWon" class="container p-5">
+          <h2 class="pb-2 border-bottom">Bids Won</h2>
+        </div>
+
+        <div id="listBids" class="container p-5">
+          <h2 class="pb-2 border-bottom">All Bids</h2>
         </div>
       </div>
     </main>

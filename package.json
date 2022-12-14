@@ -7,12 +7,7 @@
   "scripts": {
     "test": "test",
     "build": "sass scss:css",
-    "watch": "sass --watch scss:css & live-server",
-    "format": "prettier -w *.js & prettier -w *.html",
-    "lint": "eslint *.js",
-    "lint-fix": "eslint *.js --cache --fix",
-    "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "watch": "sass --watch scss:css & live-server"
   },
   "repository": {
     "type": "git",
@@ -29,29 +24,10 @@
   },
   "homepage": "https://github.com/andjhay/Auction-Site-Semester-Project-2#readme",
   "dependencies": {
-    "bootstrap": "^5.2.2"
+    "bootstrap": "^5.2.3"
   },
   "devDependencies": {
-    "eslint": "^8.28.0",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.0.4",
     "live-server": "^1.2.2",
-    "prettier": "^2.8.0",
     "sass": "^1.56.1"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.html": [
-      "prettier --write"
-    ],
-    "*.scss": [
-      "prettier --write"
-    ],
-    "*.css": [
-      "prettier --write"
-    ]
   }
 }
