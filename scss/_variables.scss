@@ -33,13 +33,13 @@ $black: #000 !default;
 // scss-docs-end gray-color-variables
 
 // scss-docs-start theme-color-variables
-$primary: #8C8177 !default;
+$primary: #8c8177 !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: #BFCFD9 !default;
+$light: #bfcfd9 !default;
 $dark: $gray-900 !default;
 // scss-docs-end theme-color-variables
 
@@ -143,6 +143,7 @@ $grid-breakpoints: (
 $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans",
   Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// $font-family-base: "Segoe UI";
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text

@@ -38,7 +38,7 @@ const bids = await userBids();
 
 function renderProfile() {
   displayName.innerHTML += user.name;
-  pageTitle.innerHTML = `Social Noroff - Profile ${user.name}`;
+  pageTitle.innerHTML = `World Auction - Profile ${user.name}`;
 
   if (user.avatar == "" || user.avatar == null) {
     profilePictureDiv.innerHTML = `<h2 class="h-100"> No Avatar </h2>`;

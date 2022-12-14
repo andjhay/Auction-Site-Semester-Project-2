@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>World Auction - Home</title>
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <title>World Auction - Listings</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/main_pages/main.mjs" defer type="module"></script>
   </head>
@@ -16,10 +13,7 @@
   <body class="d-flex flex-column min-vh-100">
     <header class="d-xl-flex align-items-center bg-light">
       <div id="logoContainer" class="container">
-        <div
-          id="logo"
-          class="d-flex justify-content-center justify-content-xl-start align-items-center"
-        >
+        <div id="logo" class="d-flex justify-content-center justify-content-xl-start align-items-center">
           <a href="index.html"
             ><img
               class="m-2 d-inline"
@@ -36,32 +30,19 @@
         </div>
       </div>
       <div id="firstNavContainer" class="container">
-        <div
-          id="firstNav"
-          class="d-flex justify-content-center align-items-center"
-        >
+        <div id="firstNav" class="d-flex justify-content-center align-items-center">
           <ul class="nav nav-pills">
             <li class="nav-item m-1">
-              <a href="index.html" class="nav-link active" aria-current="page"
-                >Home</a
-              >
+              <a href="index.html" class="nav-link active" aria-current="page">Home</a>
             </li>
             <li class="nav-item m-1">
-              <a
-                href="auctions.html"
-                class="nav-link active"
-                aria-current="page"
-                >Listings</a
-              >
+              <a href="auctions.html" class="nav-link active" aria-current="page">Listings</a>
             </li>
           </ul>
         </div>
       </div>
       <div id="secondNavContainer" class="container">
-        <div
-          id="secondNav"
-          class="d-flex justify-content-center justify-content-xl-end align-items-center"
-        >
+        <div id="secondNav" class="d-flex justify-content-center justify-content-xl-end align-items-center">
           <ul class="nav nav-pills">
             <li class="nav-item">
               <a href="userprofile.html" class="nav-link my-2"
@@ -84,9 +65,7 @@
             </li>
             <li class="nav-item"><p id="currentUser" class="my-3"></p></li>
             <li class="nav-item">
-              <button id="logOutButton" class="btn btn-primary m-2">
-                Log Out
-              </button>
+              <button id="logOutButton" class="btn btn-primary m-2">Log Out</button>
             </li>
           </ul>
         </div>
@@ -95,51 +74,32 @@
 
     <main class="text-center">
       <div class="justify-content-center m-2">
-        <h2 class="m-3 border-bottom">Auction Listings</h2>
+        <h2 id="auctionTitle" class="m-3 border-bottom">Auction Listings</h2>
       </div>
       <div class="justify-content-center m-auto w-50">
         <form id="search" class="m-3 d-flex">
-          <input
-            class="form-control"
-            type="search"
-            name="search"
-            placeholder="Search"
-          />
-          <button type="submit" id="search" class="btn btn-secondary mx-1">
-            search
-          </button>
+          <input class="form-control" type="search" name="search" placeholder="Search" />
+          <button type="submit" id="search" class="btn btn-secondary mx-1">search</button>
         </form>
       </div>
-      <button
-        id="createNew"
-        class="btn btn-secondary d-none"
-        onclick="location.href=`create_edit.html?page=create`;"
-      >
+      <button id="createNew" class="btn btn-secondary d-none" onclick="location.href=`create_edit.html?page=create`;">
         Create New Listing
       </button>
       <div class="w-50 m-auto">
-        <div class="m-2">
+        <div id="sortDiv" class="m-2">
           <p id="sortDisplay"></p>
           <button id="sortNew" class="btn btn-secondary m-2">Newest</button
           ><button id="sortOld" class="btn btn-secondary m-2">Oldest</button>
           <button id="sortActive" class="btn btn-secondary m-2">Active</button
-          ><button id="sortInactive" class="btn btn-secondary m-2">
-            Inactive
-          </button>
-          <button id="endingSoon" class="btn btn-secondary m-2">
-            View Ending Soon
-          </button>
+          ><button id="sortInactive" class="btn btn-secondary m-2">Inactive</button>
+          <button id="endingSoon" class="btn btn-secondary m-2">View Ending Soon</button>
         </div>
       </div>
       <div id="listings" class="container"></div>
-      <div class="row mb-5 p-3 w-50 m-auto">
-        <button id="previousPage" class="col btn btn-secondary m-2">
-          Previous page
-        </button>
+      <div id="changePage" class="row mb-5 p-3 w-50 m-auto">
+        <button id="previousPage" class="col btn btn-secondary m-2">Previous page</button>
         <h1 id="pageNumber" class="col"></h1>
-        <button id="nextPage" class="col btn btn-secondary m-2">
-          Next page
-        </button>
+        <button id="nextPage" class="col btn btn-secondary m-2">Next page</button>
       </div>
     </main>
 
@@ -149,9 +109,7 @@
           <a href="index.html" class="nav-link px-2 text-black">Home</a>
         </li>
         <li class="nav-item">
-          <a href="userprofile.html" class="nav-link px-2 text-black"
-            >Profile</a
-          >
+          <a href="userprofile.html" class="nav-link px-2 text-black">Profile</a>
         </li>
         <li class="nav-item">
           <a href="login.html" class="nav-link px-2 text-black">Login</a>
@@ -160,9 +118,7 @@
           <a href="register.html" class="nav-link px-2 text-black">Register</a>
         </li>
       </ul>
-      <p class="text-center m-0 pb-4">
-        © 2022 World Auction by <a href="https://andrewhay.no/"> Andrew Hay </a>
-      </p>
+      <p class="text-center m-0 pb-4">© 2022 World Auction by <a href="https://andrewhay.no/"> Andrew Hay </a></p>
     </footer>
   </body>
 </html>

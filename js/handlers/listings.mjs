@@ -20,8 +20,15 @@ export async function listingsFetch() {
   const displayPage = document.querySelector("#pageNumber");
   const container = document.querySelector("#listings");
   const sortDisplay = document.querySelector("#sortDisplay");
+  const sortDiv = document.querySelector("#sortDiv");
+  const pagePick = document.querySelector("#changePage");
+  const searchBox = document.querySelector("#search");
+  const createButton = document.querySelector("#createNew");
+  const auctionTitle = document.querySelector("#auctionTitle");
+
   let limit = 10;
   let offset = 0;
+
   storage.save("currentPage", offset);
   let activeStatus = "_active=true";
   var currentSort = storage.load("currentSort");
@@ -98,6 +105,11 @@ export async function listingsFetch() {
     if (searchUrl != null) {
       var listings = await fetchData(apiPath, apiListings, searchUrl, listingFlags);
       renderListingTemplate(listings, container);
+      pagePick.classList.add("d-none");
+      sortDiv.classList.add("d-none");
+      searchBox.classList.add("d-none");
+      createButton.classList.add("d-none");
+      auctionTitle.innerHTML = "Listing";
     } else {
       listings = await fetchAllData(apiPath, apiListings, activeStatus, limit, sort, offset);
       renderListingsTemplate(listings, container);
