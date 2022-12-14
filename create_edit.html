@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Auction - Home</title>
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/main_pages/main.mjs" defer type="module"></script>
   </head>
@@ -16,10 +13,7 @@
   <body class="d-flex flex-column min-vh-100">
     <header class="d-xl-flex align-items-center bg-light">
       <div id="logoContainer" class="container">
-        <div
-          id="logo"
-          class="d-flex justify-content-center justify-content-xl-start align-items-center"
-        >
+        <div id="logo" class="d-flex justify-content-center justify-content-xl-start align-items-center">
           <a href="index.html"
             ><img
               class="m-2 d-inline"
@@ -36,32 +30,19 @@
         </div>
       </div>
       <div id="firstNavContainer" class="container">
-        <div
-          id="firstNav"
-          class="d-flex justify-content-center align-items-center"
-        >
+        <div id="firstNav" class="d-flex justify-content-center align-items-center">
           <ul class="nav nav-pills">
             <li class="nav-item m-1">
-              <a href="index.html" class="nav-link active" aria-current="page"
-                >Home</a
-              >
+              <a href="index.html" class="nav-link active" aria-current="page">Home</a>
             </li>
             <li class="nav-item m-1">
-              <a
-                href="auctions.html"
-                class="nav-link active"
-                aria-current="page"
-                >Listings</a
-              >
+              <a href="auctions.html" class="nav-link active" aria-current="page">Listings</a>
             </li>
           </ul>
         </div>
       </div>
       <div id="secondNavContainer" class="container">
-        <div
-          id="secondNav"
-          class="d-flex justify-content-center justify-content-xl-end align-items-center"
-        >
+        <div id="secondNav" class="d-flex justify-content-center justify-content-xl-end align-items-center">
           <ul class="nav nav-pills">
             <li class="nav-item">
               <a href="userprofile.html" class="nav-link my-2"
@@ -84,9 +65,7 @@
             </li>
             <li class="nav-item"><p id="currentUser" class="my-3"></p></li>
             <li class="nav-item">
-              <button id="logOutButton" class="btn btn-primary m-2">
-                Log Out
-              </button>
+              <button id="logOutButton" class="btn btn-primary m-2">Log Out</button>
             </li>
           </ul>
         </div>
@@ -100,14 +79,7 @@
           <div class="form w-50 m-auto">
             <form id="listingForm">
               <div class="form-floating">
-                <input
-                  type="text"
-                  class="form-control top"
-                  name="title"
-                  id="title"
-                  placeholder="Title"
-                  required
-                /></input>
+                <input type="text" class="form-control top" name="title" id="title" placeholder="Title" required />
                 <label for="title">Title (required)</label>
               </div>
 
@@ -123,13 +95,7 @@
               </div>
 
               <div class="form-floating">
-                <input
-                  type="text"
-                  class="form-control mid"
-                  name="tags"
-                  id="tags"
-                  placeholder="Tags"
-                /></input>
+                <input type="text" class="form-control mid" name="tags" id="tags" placeholder="Tags" />
                 <label for="tags">Tags</label>
               </div>
 
@@ -142,48 +108,21 @@
                   placeholder="Date"
                   min=""
                   required
-                /></input>
+                />
                 <label for="date">End Date (required min 24 hour)</label>
               </div>
 
               <div id="mediaField" class="form-floating">
-                <input
-                  type="text"
-                  class="form-control mid"
-                  name="media"
-                  id="media"
-                  placeholder="Media (URL)"
-                /></input>
+                <input type="text" class="form-control mid" name="media" id="media" placeholder="Media (URL)" />
                 <label for="media">Media (URL only editable)</label>
               </div>
 
-              <button
-                type="submit"
-                id="createButton"
-                class="w-50 m-2 btn btn-lg btn-primary d-none"
-              >
-                Create
-              </button>
-              <button
-                type="submit"
-                id="editButton"
-                class="w-50 m-2 btn btn-lg btn-primary d-none"
-              >
-                Edit
-              </button>
+              <button type="submit" id="createButton" class="w-50 m-2 btn btn-lg btn-primary d-none">Create</button>
+              <button type="submit" id="editButton" class="w-50 m-2 btn btn-lg btn-primary d-none">Edit</button>
             </form>
-            <button
-              id="deleteButton"
-              class="w-50 m-2 btn btn-lg btn-primary d-none"
-            >
-              Delete
-            </button>
-            <button id="addMedia" class="btn btn-secondary m-1 d-none">
-              Add another image?
-            </button>
-            <button id="resetMedia" class="btn btn-secondary m-1 d-none">
-              Remove Media Fields
-            </button>
+            <button id="deleteButton" class="w-50 m-2 btn btn-lg btn-primary d-none">Delete</button>
+            <button id="addMedia" class="btn btn-secondary m-1 d-none">Add another image?</button>
+            <button id="resetMedia" class="btn btn-secondary m-1 d-none">Remove Media Fields</button>
           </div>
         </div>
       </div>
@@ -195,9 +134,7 @@
           <a href="index.html" class="nav-link px-2 text-black">Home</a>
         </li>
         <li class="nav-item">
-          <a href="userprofile.html" class="nav-link px-2 text-black"
-            >Profile</a
-          >
+          <a href="userprofile.html" class="nav-link px-2 text-black">Profile</a>
         </li>
         <li class="nav-item">
           <a href="login.html" class="nav-link px-2 text-black">Login</a>
@@ -206,9 +143,7 @@
           <a href="register.html" class="nav-link px-2 text-black">Register</a>
         </li>
       </ul>
-      <p class="text-center m-0 pb-4">
-        © 2022 World Auction by <a href="https://andrewhay.no/"> Andrew Hay </a>
-      </p>
+      <p class="text-center m-0 pb-4">© 2022 World Auction by <a href="https://andrewhay.no/"> Andrew Hay </a></p>
     </footer>
   </body>
 </html>
