@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,13 +68,52 @@
       </div>
     </header>
 
-    <main>
-      <div class="text-center">
-        <h1 class="my-5">Welcome to World Auction</h1>
-        <div class="container w-50">
-          <img class="img-fluid rounded-5" src="./img/pexels-giallo-859895.jpg" />
+    <main class="text-center">
+
+      <div class="container px-4 py-5 mb-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Listing</h2>
+        <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+
+          <div class="form w-50 m-auto">
+          <form id="listingForm">
+  
+            <div class="form-floating">
+              <input type="text" class="form-control top" name="title" id="title" placeholder="Title" required/>
+              <label for="title">Title (required)</label>
+            </div>
+  
+            
+            <div class="form-floating">
+              <textarea type="description" class="form-control mid" name="description" id="description" placeholder="Description"></textarea>
+              <label for="description">Description</label>
+            </div>
+
+            <div class="form-floating">
+              <input type="text" class="form-control mid" name="tags" id="tags" placeholder="Tags"></input>
+              <label for="tags">Tags</label>
+            </div>
+
+            <div id="dateField" class="form-floating">
+              <input type="datetime-local" class="form-control mid" name="endsAt" id="date" placeholder="Date" min="" required/>
+              <label for="date">End Date (required min 24 hour)</label>
+            </div>
+
+            <div id="mediaField" class="form-floating">
+              <input type="text" class="form-control mid" name="media" id="media" placeholder="Media (URL)"></input>
+              <label for="media">Media (URL only editable)</label>
+            </div>
+  
+            <button type="submit" id="createButton" class="w-50 m-2 btn btn-lg btn-primary d-none">Create</button>
+            <button type="submit" id="editButton" class="w-50 m-2 btn btn-lg btn-primary d-none">Edit</button>
+            
+          </form>
+          <button id="deleteButton" class="w-50 m-2 btn btn-lg btn-primary d-none">Delete</button>
+          <button id="addMedia" class="btn btn-secondary m-1 d-none">Add another image?</button>
+          <button id="resetMedia" class="btn btn-secondary m-1 d-none">Remove Media Fields</button>
+          </div>
         </div>
       </div>
+      
     </main>
 
     <footer class="bg-primary mt-auto">

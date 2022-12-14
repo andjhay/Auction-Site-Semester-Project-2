@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,12 +68,34 @@
       </div>
     </header>
 
-    <main>
-      <div class="text-center">
-        <h1 class="my-5">Welcome to World Auction</h1>
-        <div class="container w-50">
-          <img class="img-fluid rounded-5" src="./img/pexels-giallo-859895.jpg" />
+    <main class="text-center">
+      <div class="justify-content-center m-2">
+        <h2 class="m-3 border-bottom">Auction Listings</h2>
+      </div>
+      <div class="justify-content-center m-auto w-50">
+        <form id="search" class="m-3 d-flex">
+          <input class="form-control" type="search" name="search" placeholder="Search" />
+          <button type="submit" id="search" class="btn btn-secondary mx-1">search</button>
+        </form>
+      </div>
+      <button id="createNew" class="btn btn-secondary d-none" onclick="location.href=`create_edit.html?page=create`;">
+        Create New Listing
+      </button>
+      <div class="w-50 m-auto">
+        <div class="m-2">
+          <p id="sortDisplay"></p>
+          <button id="sortNew" class="btn btn-secondary m-2">Newest</button
+          ><button id="sortOld" class="btn btn-secondary m-2">Oldest</button>
+          <button id="sortActive" class="btn btn-secondary m-2">Active</button
+          ><button id="sortInactive" class="btn btn-secondary m-2">Inactive</button>
+          <button id="endingSoon" class="btn btn-secondary m-2">View Ending Soon</button>
         </div>
+      </div>
+      <div id="listings" class="container"></div>
+      <div class="row mb-5 p-3 w-50 m-auto">
+        <button id="previousPage" class="col btn btn-secondary m-2">Previous page</button>
+        <h1 id="pageNumber" class="col"></h1>
+        <button id="nextPage" class="col btn btn-secondary m-2">Next page</button>
       </div>
     </main>
 
