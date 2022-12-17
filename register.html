@@ -21,7 +21,7 @@
               width="100px"
               alt="Website logo of a gavel, click leads back to homepage"
           /></a>
-          <a class="m-2 text-decoration-none" href="index.html"
+          <a class="m-2 text-decoration-none text-black" href="index.html"
             ><p class="h1 d-inline">
               World <br />
               Auction
@@ -33,7 +33,7 @@
         <div id="firstNav" class="d-flex justify-content-center align-items-center">
           <ul class="nav nav-pills">
             <li class="nav-item m-1">
-              <a href="index.html" class="nav-link" aria-current="page">Home</a>
+              <a href="index.html" class="nav-link active" aria-current="page">Home</a>
             </li>
             <li class="nav-item m-1">
               <a href="auctions.html" class="nav-link" aria-current="page">Listings</a>
@@ -80,8 +80,8 @@
               id="email"
               placeholder="name@stud.noroff.no"
               required
-              pattern="^[\w\-.]+@(stud.)?noroff.no$"
-              title="Email must be a @noroff.no or @stud.noroff.no address"
+              pattern="^[\w\-.]+@stud.noroff.no$"
+              title="Email must be a @stud.noroff.no address"
             />
             <label for="email">Email address (required)</label>
           </div>
@@ -101,17 +101,6 @@
           <div class="form-floating">
             <input
               type="url"
-              name="banner"
-              class="form-control mid"
-              id="banner"
-              placeholder="Banner"
-              title="Must be a URL to image file with https://"
-            />
-            <label for="banner">Banner</label>
-          </div>
-          <div class="form-floating">
-            <input
-              type="url"
               name="avatar"
               class="form-control bottom"
               id="avatar"
@@ -120,7 +109,7 @@
             />
             <label for="avatar">Avatar</label>
           </div>
-          <button class="w-100 btn btn-lg btn-primary">Create Account</button>
+          <button class="w-100 btn btn-lg btn-primary text-white">Create Account</button>
         </form>
       </div>
     </main>

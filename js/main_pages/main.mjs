@@ -14,9 +14,10 @@ const pageType = url.searchParams.get("page");
 const path = pathOriginal.slice(pathOriginal.lastIndexOf("/") + 1);
 if (path === "login.html") {
   setLoginFormListener();
+  checkLoggedIn(path);
 } else if (path === "register.html") {
-  logOutButton.Disabled = true;
   setRegisterFormListener();
+  checkLoggedIn(path);
 } else {
   checkLoggedIn(path);
 }

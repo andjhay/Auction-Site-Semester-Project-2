@@ -4,7 +4,7 @@ import { load } from "../handlers/storage.mjs";
 
 export function loginTemplate(path, mainContainer, currentUser) {
   if (path === "userprofile.html") {
-    mainContainer.innerHTML = `<div class="mb-3">Welcome to World Auction</br>To access your profiles you must</div>
+    mainContainer.innerHTML = `<div class="m-3">Welcome to World Auction</br>To access your profile you must</div>
   <div>
     <a href="login.html" class="m-2 btn btn-secondary w-25">Login</a>
     <p> or </p>

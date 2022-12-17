@@ -1,4 +1,5 @@
 import { apiPath } from "./api.mjs";
+import { login } from "./login.mjs";
 
 const apiReg = "/auth/register";
 const method = "post";
@@ -14,7 +15,15 @@ export async function register(profile) {
     method,
     body,
   });
-  const result = await response.json();
-  alert("You are now registered");
-  return result;
+
+  if (response.ok) {
+    const result = await response.json();
+    alert("You are now registered");
+    console.log(profile.password);
+    login(profile);
+    return result;
+  } else {
+    const result = await response.json();
+    alert("ERROR " + result.errors[0].message);
+  }
 }

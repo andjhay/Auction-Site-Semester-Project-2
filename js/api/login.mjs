@@ -15,11 +15,17 @@ export async function login(profile) {
     method,
     body,
   });
-  const { accessToken, ...user } = await response.json();
 
-  storage.save("token", accessToken);
-  storage.save("user", user);
-  const currentUser = storage.load("user");
-  alert(`You are now logged in as ${currentUser.name} `);
-  window.location.href = "userprofile.html";
+  if (response.ok) {
+    const { accessToken, ...user } = await response.json();
+    storage.save("token", accessToken);
+    storage.save("user", user);
+    const currentUser = storage.load("user");
+    alert(`You are now logged in as ${currentUser.name} `);
+    window.location.href = "userprofile.html";
+    return result;
+  } else {
+    const result = await response.json();
+    alert("ERROR " + result.errors[0].message);
+  }
 }
