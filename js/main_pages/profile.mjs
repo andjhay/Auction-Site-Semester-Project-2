@@ -38,7 +38,7 @@ const bids = await userBids();
 
 function renderProfile() {
   displayName.innerHTML += user.name;
-  pageTitle.innerHTML = `World Auction - Profile ${user.name}`;
+  pageTitle.innerHTML = `World Auction - ${user.name}`;
 
   if (user.avatar == "" || user.avatar == null) {
     profilePictureDiv.innerHTML = `<h2 class="h-100"> No Avatar </h2>`;
@@ -52,8 +52,8 @@ function renderProfile() {
   if (checkLoggedIn() == true && selectedUser == null) {
     updateAvatar.innerHTML += `<form id="avatarForm">
     <div class="form-floating">
-              <input type="text" class="form-control" name="avatar" id="avatar" placeholder="Avatar (URL)"></input>
-              <label for="avatar"> Avatar (URL) </label>
+              <input type="url" class="form-control" name="avatar" id="avatar" placeholder="Avatar" required pattern=".*\.jpg|.png|.gif$"></input>
+              <label for="avatar"> Avatar (url jpg,png,gif) </label>
     </div>
     <button type="submit" id="avatarButton" class="btn btn-secondary my-1"> Update Users Avatar </button>
     </form> `;
@@ -63,28 +63,27 @@ function renderProfile() {
 
     user.listings.forEach((listing) => {
       listListings.innerHTML += `<div class="col shadow border rounded-4 p-0 m-2"> 
-    <div> <img id="listingImg" class="img-fluid rounded-4" src="${listing.media[0]}" alt=""> </div>
-    <div> <h5>${listing.title}</h5> <a href="create_edit.html?id=${listing.id}&page=edit"> <button class="btn btn-secondary m-2"> Edit </button></a><a href="auctions.html?search=${listing.id}"> <button class="btn btn-secondary m-2"> View </button></a></div>
+    <div> <img id="listingImg" class="img-fluid rounded-4" src="${listing.media[0]}" alt="image of item listed for auction"> </div>
+    <div> <h5>${listing.title}</h5> <a href="create_edit.html?id=${listing.id}&page=edit"> <button class="btn btn-secondary m-2">Edit</button></a><a href="auctions.html?search=${listing.id}"><button class="btn btn-secondary m-2">View</button></a></div>
     </div>`;
     });
   } else {
     user.listings.forEach((listing) => {
       listListings.innerHTML += `<div class="col shadow border rounded-4 p-0 m-2"> 
-  <div> <img id="listingImg" class="img-fluid rounded-4" src="${listing.media[0]}" alt=""> </div>
+  <div> <img id="listingImg" class="img-fluid rounded-4" src="${listing.media[0]}" alt="image of item listed for auction"> </div>
   <div> <h5>${listing.title}</h5><a href="auctions.html?search=${listing.id}"> <button class="btn btn-secondary m-2"> View </button></a></div>
   </div>`;
     });
   }
 
   userDetails.innerHTML = `<p>Name: ${user.name}</p>
+  <p>Available Credits: ${user.credits} $</p>
 <p>Email: ${user.email}</p>
 <p>Listed Items: ${user.listings.length}</p>
 <p>Open Bids: ${bids.length}</p>
 <p>Auctions Won: ${user.wins.length}</p>
 
 `;
-
-  console.log(user.wins);
 
   bids.forEach((bid) => {
     listBids.innerHTML += `<div class="border rounded-4"> 
