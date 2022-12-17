@@ -32,6 +32,12 @@ export async function listingsFetch() {
   storage.save("currentPage", offset);
   let activeStatus = "_active=true";
   var currentSort = storage.load("currentSort");
+  var currentPage = storage.load("currentPage");
+
+  if (currentPage == "" || currentPage == null) {
+    storage.save("currentPage", 1);
+    currentPage = storage.load("currentPage");
+  }
 
   if (currentSort == "" || currentSort == null) {
     storage.save("currentActive", "_active=true");

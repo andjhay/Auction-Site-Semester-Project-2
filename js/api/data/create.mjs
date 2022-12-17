@@ -30,6 +30,6 @@ export async function createBid(id, bidData) {
   const user = await userProfile();
   storage.save("user", user);
   alert(`Bid Placed`);
-  window.location.href = `auctions.html?search=${id}`;
+  location.reload();
   return await response.json();
 }
