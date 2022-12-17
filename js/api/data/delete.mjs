@@ -14,7 +14,14 @@ export async function removeListing(id) {
   const response = await authFetch(deletePostURL, {
     method,
   });
-  alert(`Listing Deleted`);
-  window.location.href = "userprofile.html";
-  return await response.json();
+
+  if (response.ok) {
+    const result = await response.json();
+    alert(`Listing Deleted`);
+    window.location.href = "userprofile.html";
+    return result;
+  } else {
+    const result = await response.json();
+    alert("ERROR " + result.errors[0].message);
+  }
 }

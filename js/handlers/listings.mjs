@@ -86,8 +86,13 @@ export async function listingsFetch() {
         return true;
       }
     });
+    console.log(searchedListings);
     container.innerHTML = "";
-    renderListingsTemplate(searchedListings, container);
+    if (searchedListings.length == 0) {
+      container.innerHTML = "<h3>No Listings Matched the Search</h3>";
+    } else {
+      renderListingsTemplate(searchedListings, container);
+    }
   }
 
   Search();
