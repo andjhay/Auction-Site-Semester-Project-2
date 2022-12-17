@@ -191,6 +191,7 @@ export async function listingsFetch() {
     displayPage.innerHTML = currentPage;
     container.innerHTML = "";
     loadListings(activeStatus, limit, currentSort, offset);
+    window.scrollTo(0, 0);
   });
 
   nextButton.addEventListener("click", () => {
@@ -203,6 +204,7 @@ export async function listingsFetch() {
     displayPage.innerHTML = currentPage;
     container.innerHTML = "";
     loadListings(activeStatus, limit, currentSort, offset);
+    window.scrollTo(0, 0);
   });
 
   sortEnding.addEventListener("click", () => {

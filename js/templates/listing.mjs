@@ -47,16 +47,26 @@ export function listingTemplate(listingData) {
     aboveHighestBid = 1;
   }
 
-  listing.classList.add("d-flex", "border", "rounded-4", "shadow-lg", "m-2", "p-3");
-  listingDetails.classList.add("w-50", "border", "rounded-4", "shadow-lg", "m-2", "p-3", "text-start");
-  listingImg.classList.add("w-50");
+  listing.classList.add(
+    "w-100",
+    "d-lg-flex",
+    "border",
+    "rounded-4",
+    "shadow",
+    "my-2",
+    "p-3",
+    "align-items-center",
+    "justify-content-end"
+  );
+  listingDetails.classList.add("container-fluid", "border", "rounded-4", "shadow", "p-3", "text-start");
+  listingImg.classList.add("w-100");
 
   listingData.media.forEach((img) => {
-    listingImg.innerHTML += `<img class="m-4 rounded-4" src="${img}" width="50%">`;
+    listingImg.innerHTML += `<img class="m-4 rounded-4" src="${img}" width="50%" alt"image of the auction item">`;
   });
 
   listingDetails.innerHTML += `
-   <h2>${listingData.title}</h2> <a href="userprofile.html?name=${listingData.seller.name}">Sold by :<h5>${listingData.seller.name}</h5></a> <p>Auction created at: ${createdDate}</br>Auction will end at: ${endingDate}</p> <h5>Description:</h5><p>${listingData.description}</p> 
+   <h2>${listingData.title}</h2><h5>Sold by :</h5><a href="userprofile.html?name=${listingData.seller.name}"><h5>${listingData.seller.name}</h5></a> <p>Auction created at: ${createdDate}</br>Auction will end at: ${endingDate}</p> <h5>Description:</h5><p>${listingData.description}</p> 
   <h5>Bids - Highest Bid: ${highestBid} credits</h5></div>
   `;
 
@@ -97,6 +107,8 @@ export function listingTemplate(listingData) {
 export function renderListingsTemplate(listingData, container) {
   container.append(...listingData.map(listingTemplate));
 }
+
+
 
 export function renderListingTemplate(listingData, container) {
   container.append(listingTemplate(listingData));

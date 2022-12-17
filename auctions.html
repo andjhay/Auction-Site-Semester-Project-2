@@ -21,7 +21,7 @@
               width="100px"
               alt="Website logo of a gavel, click leads back to homepage"
           /></a>
-          <a class="m-2" href="index.html"
+          <a class="m-2 text-decoration-none" href="index.html"
             ><p class="h1 d-inline">
               World <br />
               Auction
@@ -29,11 +29,11 @@
           >
         </div>
       </div>
-      <div id="firstNavContainer" class="container">
+      <div id="firstNavContainer" class="container p-1">
         <div id="firstNav" class="d-flex justify-content-center align-items-center">
           <ul class="nav nav-pills">
             <li class="nav-item m-1">
-              <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+              <a href="index.html" class="nav-link" aria-current="page">Home</a>
             </li>
             <li class="nav-item m-1">
               <a href="auctions.html" class="nav-link active" aria-current="page">Listings</a>
@@ -41,31 +41,14 @@
           </ul>
         </div>
       </div>
-      <div id="secondNavContainer" class="container">
-        <div id="secondNav" class="d-flex justify-content-center justify-content-xl-end align-items-center">
-          <ul class="nav nav-pills">
+      <div id="secondNavContainer" class="container p-1 px-4">
+        <div id="secondNav" class="d-flex justify-content-center justify-content-xl-end">
+          <ul class="nav">
             <li class="nav-item">
-              <a href="userprofile.html" class="nav-link my-2"
-                >Profile
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  class="bi bi-person-circle"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-                  />
-                </svg>
-              </a>
+              <a href="userprofile.html" class="nav-link"><p id="currentUser" class="m-0"></p></a>
             </li>
-            <li class="nav-item"><p id="currentUser" class="my-3"></p></li>
             <li class="nav-item">
-              <button id="logOutButton" class="btn btn-primary m-2">Log Out</button>
+              <button id="logOutButton" class="btn btn-primary text-white">Log Out</button>
             </li>
           </ul>
         </div>
@@ -76,7 +59,7 @@
       <div class="justify-content-center m-2">
         <h2 id="auctionTitle" class="m-3 border-bottom">Auction Listings</h2>
       </div>
-      <div class="justify-content-center m-auto w-50">
+      <div class="d-flex justify-content-center m-auto">
         <form id="search" class="m-3 d-flex">
           <input class="form-control" type="search" name="search" placeholder="Search" />
           <button type="submit" id="search" class="btn btn-secondary mx-1">search</button>
@@ -85,37 +68,37 @@
       <button id="createNew" class="btn btn-secondary d-none" onclick="location.href=`create_edit.html?page=create`;">
         Create New Listing
       </button>
-      <div class="w-50 m-auto">
+      <div class="m-auto">
         <div id="sortDiv" class="m-2">
-          <p id="sortDisplay"></p>
-          <button id="sortNew" class="btn btn-secondary m-2">Newest</button
-          ><button id="sortOld" class="btn btn-secondary m-2">Oldest</button>
-          <button id="sortActive" class="btn btn-secondary m-2">Active</button
-          ><button id="sortInactive" class="btn btn-secondary m-2">Inactive</button>
-          <button id="endingSoon" class="btn btn-secondary m-2">View Ending Soon</button>
+          <p class="m-2" id="sortDisplay"></p>
+          <button id="sortNew" class="w-auto btn btn-secondary m-2">Newest</button
+          ><button id="sortOld" class="w-auto btn btn-secondary m-2">Oldest</button>
+          <button id="sortActive" class="w-auto btn btn-secondary m-2">Active</button
+          ><button id="sortInactive" class="w-auto btn btn-secondary m-2">Inactive</button>
+          <button id="endingSoon" class="w-auto btn btn-secondary m-2">View Ending Soon</button>
         </div>
       </div>
       <div id="listings" class="container"></div>
-      <div id="changePage" class="row mb-5 p-3 w-50 m-auto">
-        <button id="previousPage" class="col btn btn-secondary m-2">Previous page</button>
-        <h1 id="pageNumber" class="col"></h1>
-        <button id="nextPage" class="col btn btn-secondary m-2">Next page</button>
+      <div id="changePage" class="container w-100 m-auto d-flex justify-content-center align-items-center mb-5 p-3">
+        <button id="previousPage" class="btn btn-secondary m-2">Previous page</button>
+        <h1 id="pageNumber" class="m-auto"></h1>
+        <button id="nextPage" class="btn btn-secondary m-2">Next page</button>
       </div>
     </main>
 
-    <footer class="bg-primary mt-auto">
+    <footer class="bg-light mt-auto">
       <ul class="nav justify-content-center pt-2">
         <li class="nav-item">
-          <a href="index.html" class="nav-link px-2 text-black">Home</a>
+          <a href="index.html" class="nav-link px-2">Home</a>
         </li>
         <li class="nav-item">
-          <a href="userprofile.html" class="nav-link px-2 text-black">Profile</a>
+          <a href="userprofile.html" class="nav-link px-2">Profile</a>
         </li>
         <li class="nav-item">
-          <a href="login.html" class="nav-link px-2 text-black">Login</a>
+          <a href="login.html" class="nav-link px-2">Login</a>
         </li>
         <li class="nav-item">
-          <a href="register.html" class="nav-link px-2 text-black">Register</a>
+          <a href="register.html" class="nav-link px-2">Register</a>
         </li>
       </ul>
       <p class="text-center m-0 pb-4">© 2022 World Auction by <a href="https://andrewhay.no/"> Andrew Hay </a></p>

@@ -21,7 +21,7 @@
               width="100px"
               alt="Website logo of a gavel, click leads back to homepage"
           /></a>
-          <a class="m-2" href="index.html"
+          <a class="m-2 text-decoration-none text-black" href="index.html"
             ><p class="h1 d-inline">
               World <br />
               Auction
@@ -29,43 +29,26 @@
           >
         </div>
       </div>
-      <div id="firstNavContainer" class="container">
+      <div id="firstNavContainer" class="container p-1">
         <div id="firstNav" class="d-flex justify-content-center align-items-center">
           <ul class="nav nav-pills">
             <li class="nav-item m-1">
               <a href="index.html" class="nav-link active" aria-current="page">Home</a>
             </li>
             <li class="nav-item m-1">
-              <a href="auctions.html" class="nav-link active" aria-current="page">Listings</a>
+              <a href="auctions.html" class="nav-link" aria-current="page">Listings</a>
             </li>
           </ul>
         </div>
       </div>
-      <div id="secondNavContainer" class="container">
-        <div id="secondNav" class="d-flex justify-content-center justify-content-xl-end align-items-center">
-          <ul class="nav nav-pills">
+      <div id="secondNavContainer" class="container p-1 px-4">
+        <div id="secondNav" class="d-flex justify-content-center justify-content-xl-end">
+          <ul class="nav">
             <li class="nav-item">
-              <a href="userprofile.html" class="nav-link my-2"
-                >Profile
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  class="bi bi-person-circle"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-                  />
-                </svg>
-              </a>
+              <a href="userprofile.html" class="nav-link"><p id="currentUser" class="m-0"></p></a>
             </li>
-            <li class="nav-item"><p id="currentUser" class="my-3"></p></li>
             <li class="nav-item">
-              <button id="logOutButton" class="btn btn-primary m-2">Log Out</button>
+              <button id="logOutButton" class="btn btn-primary text-white">Log Out</button>
             </li>
           </ul>
         </div>
@@ -75,25 +58,29 @@
     <main>
       <div class="text-center">
         <h1 class="my-5">Welcome to World Auction</h1>
-        <div class="container w-50">
-          <img class="img-fluid rounded-5" src="./img/pexels-giallo-859895.jpg" />
+        <div class="container pb-5 px-5">
+          <img
+            class="img-fluid rounded-5"
+            src="./img/pexels-giallo-859895.jpg"
+            alt="welcome decorative image showing some old clocks"
+          />
         </div>
       </div>
     </main>
 
-    <footer class="bg-primary mt-auto">
+    <footer class="bg-light mt-auto">
       <ul class="nav justify-content-center pt-2">
         <li class="nav-item">
-          <a href="index.html" class="nav-link px-2 text-black">Home</a>
+          <a href="index.html" class="nav-link px-2">Home</a>
         </li>
         <li class="nav-item">
-          <a href="userprofile.html" class="nav-link px-2 text-black">Profile</a>
+          <a href="userprofile.html" class="nav-link px-2">Profile</a>
         </li>
         <li class="nav-item">
-          <a href="login.html" class="nav-link px-2 text-black">Login</a>
+          <a href="login.html" class="nav-link px-2">Login</a>
         </li>
         <li class="nav-item">
-          <a href="register.html" class="nav-link px-2 text-black">Register</a>
+          <a href="register.html" class="nav-link px-2">Register</a>
         </li>
       </ul>
       <p class="text-center m-0 pb-4">© 2022 World Auction by <a href="https://andrewhay.no/"> Andrew Hay </a></p>
