@@ -29,22 +29,27 @@ export function listingTemplate(listingData) {
   const bids = document.createElement("ol");
 
   var highestBid = 0;
+  var aboveHighestBid = 0;
 
-  listingData.bids.reverse().forEach((bid, i) => {
-    if (i === 0) {
-      highestBid = bid.amount;
-    } else if (highestBid < bid.amount) {
-      highestBid = bid.amount;
+  /**
+   * function check and display each bid on the listing and returns the highest bid and a value 1 above the highest bid
+   */
+
+  function displayBids() {
+    listingData.bids.reverse().forEach((bid, i) => {
+      if (i === 0) {
+        highestBid = bid.amount;
+      } else if (highestBid < bid.amount) {
+        highestBid = bid.amount;
+      }
+      bids.innerHTML += `<li id="${bid.amount}"> <a href="userprofile.html?name=${bid.bidderName}"> ${bid.bidderName} - ${bid.amount} </a></li>`;
+    });
+
+    if (highestBid === Number(highestBid)) {
+      aboveHighestBid = highestBid + 1;
+    } else {
+      aboveHighestBid = 1;
     }
-    bids.innerHTML += `<li id="${bid.amount}"> <a href="userprofile.html?name=${bid.bidderName}"> ${bid.bidderName} - ${bid.amount} </a></li>`;
-  });
-
-  var aboveHighestBid;
-
-  if (highestBid === Number(highestBid)) {
-    aboveHighestBid = highestBid + 1;
-  } else {
-    aboveHighestBid = 1;
   }
 
   listing.classList.add(
@@ -66,8 +71,7 @@ export function listingTemplate(listingData) {
   });
 
   listingDetails.innerHTML += `
-   <h2>${listingData.title}</h2><h5>Sold by :</h5><a href="userprofile.html?name=${listingData.seller.name}"><h5>${listingData.seller.name}</h5></a> <p>Auction created at: ${createdDate}</br>Auction will end at: ${endingDate}</p> <h5>Description:</h5><p>${listingData.description}</p> 
-  <h5>Bids - Highest Bid: ${highestBid} credits</h5></div>
+   <h2>${listingData.title}</h2><h5>Sold by :</h5><a href="userprofile.html?name=${listingData.seller.name}"><h5>${listingData.seller.name}</h5></a> <p>Auction created at: ${createdDate}</br>Auction will end at: ${endingDate}</p> <h5>Description:</h5><p>${listingData.description}</p>
   `;
 
   listing.appendChild(listingImg);
@@ -86,6 +90,10 @@ export function listingTemplate(listingData) {
 
     const checkIdMatch = userListings.some(matchListing);
 
+    displayBids();
+
+    listingDetails.innerHTML += `<h5>Bids - Highest Bid: ${highestBid} credits</h5>`;
+
     if (checkIdMatch == true) {
       listingDetails.innerHTML += `<div class="w-50"> <a href="create_edit.html?id=${listingData.id}&page=edit"> <button class="btn btn-secondary mt-4 w-100"> Edit </button></a> </div>`;
     } else {
@@ -99,6 +107,8 @@ export function listingTemplate(listingData) {
   </div>
   `;
     }
+  } else {
+    listingDetails.innerHTML += `<h5>Bids - Log in to view bids</h5>`;
   }
 
   return listing;
@@ -107,8 +117,6 @@ export function listingTemplate(listingData) {
 export function renderListingsTemplate(listingData, container) {
   container.append(...listingData.map(listingTemplate));
 }
-
-
 
 export function renderListingTemplate(listingData, container) {
   container.append(listingTemplate(listingData));
