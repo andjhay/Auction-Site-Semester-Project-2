@@ -17,7 +17,7 @@ export async function listingsFetch() {
   const previousButton = document.querySelector("#previousPage");
   const nextButton = document.querySelector("#nextPage");
   const sortEnding = document.querySelector("#endingSoon");
-  const displayPage = document.querySelector("#pageNumber");
+  const displayPage = document.querySelectorAll("#pageNumber");
   const container = document.querySelector("#listings");
   const sortDisplay = document.querySelector("#sortDisplay");
   const sortDiv = document.querySelector("#sortDiv");
@@ -25,11 +25,10 @@ export async function listingsFetch() {
   const searchBox = document.querySelector("#search");
   const createButton = document.querySelector("#createNew");
   const auctionTitle = document.querySelector("#auctionTitle");
+  const firstPage = document.querySelector("#firstPage");
 
   let limit = 10;
-  let offset = 0;
 
-  storage.save("currentPage", offset);
   let activeStatus = "_active=true";
   var currentSort = storage.load("currentSort");
   var currentPage = storage.load("currentPage");
@@ -38,6 +37,8 @@ export async function listingsFetch() {
     storage.save("currentPage", 1);
     currentPage = storage.load("currentPage");
   }
+
+  let offset = (currentPage - 1) * 10;
 
   if (currentSort == "" || currentSort == null) {
     storage.save("currentActive", "_active=true");
@@ -136,7 +137,11 @@ export async function listingsFetch() {
       activePost = " Inactive";
     }
     sortDisplay.innerHTML = "Currently Sorted by: " + showSort + activePost;
-    displayPage.innerHTML = currentPage;
+
+    displayPage.forEach((title) => {
+      title.innerHTML = currentPage;
+    });
+
     placeBids();
     return listings;
   }
@@ -151,7 +156,9 @@ export async function listingsFetch() {
     storage.save("currentPage", "1");
     let currentPage = Number(storage.load("currentPage"));
     storage.save("sortDisplay", "Oldest");
-    displayPage.innerHTML = currentPage;
+    displayPage.forEach((title) => {
+      title.innerHTML = currentPage;
+    });
     container.innerHTML = "";
     loadListings(activeStatus, limit, currentSort, offset);
   });
@@ -164,7 +171,9 @@ export async function listingsFetch() {
     storage.save("currentPage", "1");
     let currentPage = Number(storage.load("currentPage"));
     storage.save("sortDisplay", "Newest");
-    displayPage.innerHTML = currentPage;
+    displayPage.forEach((title) => {
+      title.innerHTML = currentPage;
+    });
     container.innerHTML = "";
     loadListings(activeStatus, limit, currentSort, offset);
   });
@@ -176,7 +185,9 @@ export async function listingsFetch() {
     const offset = 0;
     storage.save("currentPage", "1");
     let currentPage = Number(storage.load("currentPage"));
-    displayPage.innerHTML = currentPage;
+    displayPage.forEach((title) => {
+      title.innerHTML = currentPage;
+    });
     container.innerHTML = "";
     loadListings(activeStatus, limit, currentSort, offset);
   });
@@ -188,7 +199,9 @@ export async function listingsFetch() {
     const offset = 0;
     storage.save("currentPage", "1");
     let currentPage = Number(storage.load("currentPage"));
-    displayPage.innerHTML = currentPage;
+    displayPage.forEach((title) => {
+      title.innerHTML = currentPage;
+    });
     container.innerHTML = "";
     loadListings(activeStatus, limit, currentSort, offset);
   });
@@ -213,7 +226,9 @@ export async function listingsFetch() {
     storage.save("currentPage", currentPage);
     const activeStatus = storage.load("currentActive");
     const currentSort = storage.load("currentSort");
-    displayPage.innerHTML = currentPage;
+    displayPage.forEach((title) => {
+      title.innerHTML = currentPage;
+    });
     container.innerHTML = "";
     loadListings(activeStatus, limit, currentSort, offset);
     window.scrollTo(0, 0);
@@ -228,7 +243,22 @@ export async function listingsFetch() {
     storage.save("currentPage", "1");
     storage.save("sortDisplay", "Ending Soon");
     let currentPage = Number(storage.load("currentPage"));
-    displayPage.innerHTML = currentPage;
+    displayPage.forEach((title) => {
+      title.innerHTML = currentPage;
+    });
+    container.innerHTML = "";
+    loadListings(activeStatus, limit, currentSort, offset);
+  });
+
+  firstPage.addEventListener("click", () => {
+    const activeStatus = storage.load("currentActive");
+    const currentSort = storage.load("currentSort");
+    const offset = 0;
+    storage.save("currentPage", "1");
+    let currentPage = Number(storage.load("currentPage"));
+    displayPage.forEach((title) => {
+      title.innerHTML = currentPage;
+    });
     container.innerHTML = "";
     loadListings(activeStatus, limit, currentSort, offset);
   });
