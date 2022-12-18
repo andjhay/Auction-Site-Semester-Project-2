@@ -2,6 +2,7 @@
 
 https://andjhay.github.io/Auction-Site-Semester-Project-2/index.html
 
+![worldauction](https://user-images.githubusercontent.com/88853764/208305167-3f771d34-88c7-4231-a340-9015697d0be7.png)
 
 ## Description
 
