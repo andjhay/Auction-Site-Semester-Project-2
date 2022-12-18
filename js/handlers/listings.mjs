@@ -122,6 +122,9 @@ export async function listingsFetch() {
       sortDiv.classList.add("d-none");
       searchBox.classList.add("d-none");
       createButton.classList.add("d-none");
+      displayPage.forEach((title) => {
+      title.classList.add("d-none") 
+      });
       auctionTitle.innerHTML = "Listing";
     } else {
       listings = await fetchAllData(apiPath, apiListings, activeStatus, limit, sort, offset);
