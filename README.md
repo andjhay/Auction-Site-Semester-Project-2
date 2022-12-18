@@ -1,12 +1,27 @@
 # Auction-Site-Semester-Project-2
 
+https://andjhay.github.io/Auction-Site-Semester-Project-2/index.html
+
+
+## Description
+
+This repository is the main semester project for Noroff Front-End development course first semester 2022.
+
 ## Installation
 
-### Download and extract folder
+### Installing
 
-### To install dependencies
+1. Clone the repo:
 
-run - npm install
+```bash
+git clone git@github.com:andjhay/Auction-Site-Semester-Project-2.git
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
 
 ## Auction site project as end of semester submission for Noroff semester 1 of year 2.
 
