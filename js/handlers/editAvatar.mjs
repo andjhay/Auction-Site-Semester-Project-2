@@ -19,8 +19,6 @@ export async function updateAvatarListener(username) {
       const avatarData = Object.fromEntries(formData.entries());
 
       updateAvatar(avatarData, username);
-      location.reload();
-      alert(`Avatar Updated`);
     });
   }
 }

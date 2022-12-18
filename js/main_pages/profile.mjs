@@ -57,7 +57,7 @@ function renderProfile() {
     updateAvatar.innerHTML += `<form id="avatarForm">
     <div class="form-floating">
               <input type="url" class="form-control" name="avatar" id="avatar" placeholder="Avatar" required pattern=".*\.jpg|.png|.gif$"></input>
-              <label for="avatar"> Avatar (url jpg,png,gif) </label>
+              <label for="avatar"> (http:/ .jpg/png/gif) </label>
     </div>
     <button type="submit" id="avatarButton" class="btn btn-secondary my-1"> Update Users Avatar </button>
     </form> `;

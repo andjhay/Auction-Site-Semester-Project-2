@@ -28,5 +28,13 @@ export async function updateAvatar(newAvatar, username) {
     body: JSON.stringify(newAvatar),
   });
 
-  return await response.json();
+  if (response.ok) {
+    result = await response.json();
+    location.reload();
+    alert(`Avatar Updated`);
+    return result;
+  } else {
+    const result = await response.json();
+    alert("ERROR " + result.errors[0].message);
+  }
 }

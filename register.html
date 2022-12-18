@@ -84,7 +84,7 @@
               pattern="^[\w\-.]+@stud.noroff.no$"
               title="Email must be a @stud.noroff.no address"
             />
-            <label for="email">Email address (required)</label>
+            <label for="email">Email (@stud.noroff.no)</label>
           </div>
           <div class="form-floating">
             <input
@@ -97,7 +97,7 @@
               minlength="8"
               title="Must be at least 8 characters long"
             />
-            <label for="password">Password (required)</label>
+            <label for="password">Password (8 characters)</label>
           </div>
           <div class="form-floating">
             <input
@@ -107,8 +107,9 @@
               id="avatar"
               placeholder="Avatar"
               title="Must be a URL to image file with https://"
+              pattern=".*\.jpg|.png|.gif$"
             />
-            <label for="avatar">Avatar</label>
+            <label for="avatar">Avatar Url (.jpg .png .gif)</label>
           </div>
           <button class="w-100 btn btn-lg btn-primary text-white">Create Account</button>
         </form>
