@@ -18,6 +18,10 @@ const updateAvatar = document.querySelector("#updateAvatar");
 
 const apiProfiles = "/profiles";
 
+/**
+ * Fetches users bids
+ */
+
 function userBids() {
   const url = new URL(location.href);
   const selectedUser = url.searchParams.get("name");

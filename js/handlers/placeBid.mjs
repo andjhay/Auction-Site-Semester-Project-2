@@ -1,5 +1,9 @@
 import { createBid } from "../api/data/create.mjs";
 
+/**
+ * Function to gather input from bid form and reformat into usable object to send to api
+ */
+
 export async function placeBids() {
   const bidForms = document.querySelectorAll("#bidForm");
 
@@ -16,5 +20,4 @@ export async function placeBids() {
       createBid(id, bid);
     });
   });
-  
 }

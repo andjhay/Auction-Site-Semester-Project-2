@@ -1,5 +1,11 @@
 import { updateAvatar } from "../api/data/update.mjs";
 
+/**
+ * Function to gather form data for updating user avatar
+ * @param {string} username the logged in user who is updating their avatar
+ * 
+ */
+
 export async function updateAvatarListener(username) {
   const form = document.querySelector("#avatarForm");
 

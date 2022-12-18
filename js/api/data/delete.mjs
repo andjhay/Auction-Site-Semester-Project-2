@@ -4,6 +4,11 @@ import { authFetch } from "../authFetch.mjs";
 const action = "/listings";
 const method = "delete";
 
+/**
+ * Deletes the users selected listing from the server if the user is the owner of the listing and is logged in
+ * @param {string} id listing id
+ */
+
 export async function removeListing(id) {
   if (!id) {
     throw new Error("Delete Post requires ID");

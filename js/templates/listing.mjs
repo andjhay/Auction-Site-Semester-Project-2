@@ -62,7 +62,7 @@ export function listingTemplate(listingData) {
   listingImg.classList.add("w-100");
 
   listingData.media.forEach((img) => {
-    listingImg.innerHTML += `<img class="m-4 rounded-4" src="${img}" width="50%" alt"image of the auction item">`;
+    listingImg.innerHTML += `<img class="m-4 rounded-4" src="${img}" width="50%" alt="Image of the auction item">`;
   });
 
   listingDetails.innerHTML += `

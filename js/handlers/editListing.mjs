@@ -5,6 +5,10 @@ import { selectDeleteButtons } from "./deleteListing.mjs";
 
 const apiListings = "/listings";
 
+/**
+ * function gathers info from form to update a listing
+ */
+
 export async function updateListingListener() {
   const form = document.querySelector("#listingForm");
   const mediaField = document.querySelector("#mediaField");

@@ -45,11 +45,11 @@ $dark: $gray-900 !default;
 
 // custom colours
 
-$main: #8c8177 !default;
+$main: #324359 !default;
 $second: #bfcfd9 !default;
-$third: #d9bdad !default;
+$third: #65d173 !default;
 $fourth: #8a96a6 !default;
-$fifth: #324359 !default;
+$fifth: #8c8177 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
@@ -59,7 +59,7 @@ $theme-colors: (
   "info": $info,
   "warning": $warning,
   "danger": $danger,
-  "light": $second,
+  "light": $third,
   "dark": $dark,
 ) !default;
 
@@ -69,7 +69,7 @@ $theme-colors: (
 
 $link-color: $black !default;
 $link-shade-percentage: 20% !default;
-$link-hover-color: $main !default;
+$link-hover-color: $third !default;
 
 // Grid breakpoints
 
@@ -88,8 +88,8 @@ $font-family-base: "Source Code Pro", "Roboto", "Segoe UI";
 
 // Nav Sass
 
-$nav-link-color: $fifth;
-$nav-link-hover-color: $main;
+$nav-link-color: $main;
+$nav-link-hover-color: $fifth;
 
 $nav-pills-link-active-color: $white;
 $nav-pills-link-active-bg: $main;

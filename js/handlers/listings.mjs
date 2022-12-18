@@ -73,7 +73,7 @@ export async function listingsFetch() {
   }
 
   /**
-   * Loads all api posts (total is custom set) then returns only objects in array that match the search input
+   * Loads as many as possible api posts (total is custom set) then returns only objects in array that match the search input
    * @param {string} searchTerm the input from search field
    */
 
@@ -105,6 +105,7 @@ export async function listingsFetch() {
 
   /**
    * Loads listings to page
+   * @param {number} activeStatus a sorting parameter saved to localstorage
    * @param {number} limit how many listings to load
    * @param {string} sort query string to tell api how to return array
    * @param {number} offset number tells the api how many post from the first in the array to return, used to cycle through page by page

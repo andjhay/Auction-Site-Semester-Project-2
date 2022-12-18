@@ -6,6 +6,11 @@ import * as storage from "../../handlers/storage.mjs";
 const action = "/listings";
 const method = "post";
 
+/**
+ * Sends listing data to the server
+ * @param {string} listingData the input from create listing form
+ */
+
 export async function createListing(listingData) {
   const createListingURL = apiPath + action;
   if (listingData.media[0] == [""]) {
@@ -19,6 +24,12 @@ export async function createListing(listingData) {
   window.location.href = "userprofile.html";
   return await response.json();
 }
+
+/**
+ * Sends bid data to the server
+ * @param {string} bidData the input bid input form
+ * @param {string} id listing id
+ */
 
 export async function createBid(id, bidData) {
   const placeBidURL = apiPath + action + `/${id}` + "/bids";
