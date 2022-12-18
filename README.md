@@ -2,7 +2,7 @@
 
 ## Installation
 
-Download and extract
+Download and extract folder
 
 run - npm install
 

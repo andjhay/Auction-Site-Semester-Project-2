@@ -69,7 +69,7 @@ $theme-colors: (
 
 $link-color: $black !default;
 $link-shade-percentage: 20% !default;
-$link-hover-color: $third !default;
+$link-hover-color: $fifth !default;
 
 // Grid breakpoints
 
@@ -89,7 +89,7 @@ $font-family-base: "Source Code Pro", "Roboto", "Segoe UI";
 // Nav Sass
 
 $nav-link-color: $main;
-$nav-link-hover-color: $fifth;
+$nav-link-hover-color: $white;
 
 $nav-pills-link-active-color: $white;
 $nav-pills-link-active-bg: $main;

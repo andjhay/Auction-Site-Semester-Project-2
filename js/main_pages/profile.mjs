@@ -56,8 +56,8 @@ function renderProfile() {
   if (checkLoggedIn() == true && selectedUser == null) {
     updateAvatar.innerHTML += `<form id="avatarForm">
     <div class="form-floating">
-              <input type="url" class="form-control" name="avatar" id="avatar" placeholder="Avatar" required pattern=".*\.jpg|.png|.gif$"></input>
-              <label for="avatar"> (http:/ .jpg/png/gif) </label>
+              <input type="url" class="form-control" name="avatar" id="avatar" placeholder="Avatar" title="Must be a url starting with http:// and ending with .jpg .png or .gif" required pattern=".*\.jpg|.png|.gif$"></input>
+              <label for="avatar"> (http:// .jpg/png/gif) </label>
     </div>
     <button type="submit" id="avatarButton" class="btn btn-secondary my-1"> Update Users Avatar </button>
     </form> `;
