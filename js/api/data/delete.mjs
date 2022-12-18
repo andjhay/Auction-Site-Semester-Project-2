@@ -10,21 +10,15 @@ const method = "delete";
  */
 
 export async function removeListing(id) {
-  if (!id) {
-    throw new Error("Delete Post requires ID");
-  }
-
   const deletePostURL = `${apiPath}${action}/${id}`;
 
   const response = await authFetch(deletePostURL, {
     method,
   });
 
-  if (response.ok) {
-    const result = await response.json();
-    alert(`Listing Deleted`);
+  if (response.ok == true) {
     window.location.href = "userprofile.html";
-    return result;
+    alert(`Listing Deleted`);
   } else {
     const result = await response.json();
     alert("ERROR " + result.errors[0].message);

@@ -66,17 +66,31 @@ function renderProfile() {
     createButton.classList.remove("d-none");
 
     user.listings.forEach((listing) => {
-      listListings.innerHTML += `<div class="col shadow border rounded-4 p-0 m-2"> 
+      if (listing.media.length != 0) {
+        listListings.innerHTML += `<div class="col shadow border rounded-4 p-0 m-2"> 
     <div> <img id="listingImg" class="img-fluid rounded-4" src="${listing.media[0]}" alt="image of item listed for auction"> </div>
     <div> <h5>${listing.title}</h5> <a href="create_edit.html?id=${listing.id}&page=edit"> <button class="btn btn-secondary m-2">Edit</button></a><a href="auctions.html?search=${listing.id}"><button class="btn btn-secondary m-2">View</button></a></div>
     </div>`;
+      } else {
+        listListings.innerHTML += `<div class="col shadow border rounded-4 p-0 m-2"> 
+      <div><h3>No Image</h3></div>
+      <div> <h5>${listing.title}</h5> <a href="create_edit.html?id=${listing.id}&page=edit"> <button class="btn btn-secondary m-2">Edit</button></a><a href="auctions.html?search=${listing.id}"><button class="btn btn-secondary m-2">View</button></a></div>
+      </div>`;
+      }
     });
   } else {
     user.listings.forEach((listing) => {
-      listListings.innerHTML += `<div class="col shadow border rounded-4 p-0 m-2"> 
+      if (listing.media.length != 0) {
+        listListings.innerHTML += `<div class="col shadow border rounded-4 p-0 m-2"> 
   <div> <img id="listingImg" class="img-fluid rounded-4" src="${listing.media[0]}" alt="image of item listed for auction"> </div>
   <div> <h5>${listing.title}</h5><a href="auctions.html?search=${listing.id}"> <button class="btn btn-secondary m-2"> View </button></a></div>
   </div>`;
+      } else {
+        listListings.innerHTML += `<div class="col shadow border rounded-4 p-0 m-2"> 
+  <div><h3>No Image</h3></div>
+  <div> <h5>${listing.title}</h5><a href="auctions.html?search=${listing.id}"> <button class="btn btn-secondary m-2"> View </button></a></div>
+  </div>`;
+      }
     });
   }
 
