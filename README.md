@@ -14,6 +14,10 @@ This repository is the main semester project for Noroff Front-End development co
 
 Vanilla Javascript and HTML, REST API Hosted by Noroff
 
+### API
+
+https://docs.noroff.dev/
+
 ### CSS frameworks
 
 Bootstrap
