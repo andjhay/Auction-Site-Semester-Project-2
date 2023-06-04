@@ -1,5 +1,6 @@
-# Auction-Site-Semester-Project-2
+# Auction Site Semester Project 2
 
+### Hosted Demo
 https://andjhay.github.io/Auction-Site-Semester-Project-2/index.html
 
 ![worldauction](https://user-images.githubusercontent.com/88853764/208305167-3f771d34-88c7-4231-a340-9015697d0be7.png)
@@ -7,11 +8,21 @@ https://andjhay.github.io/Auction-Site-Semester-Project-2/index.html
 
 ## Description
 
-This repository is the main semester project for Noroff Front-End development course first semester 2022.
+This repository is the main semester project for Noroff Front-End development course first semester of second year. The goal was to develop a site using a css framework.
 
-## Installation
+## Technical Resources Used
 
-### Installing
+Vanilla Javascript and HTML, REST API Hosted by Noroff
+
+### CSS frameworks
+
+Bootstrap
+
+### Hosting service
+
+GitHub Pages
+
+## Install and run
 
 1. Clone the repo:
 
@@ -25,33 +36,17 @@ git clone git@github.com:andjhay/Auction-Site-Semester-Project-2.git
 npm install
 ```
 
-## Auction site project as end of semester submission for Noroff semester 1 of year 2.
+3. Run development environment:
 
-| Resource         | URL                                                                  |
-| ---------------- | -------------------------------------------------------------------- |
-| Gantt Chart      | https://xd.adobe.com/view/caebfba3-d19a-4b04-a1da-a3e2f42a338f-9fb8/ |
-| Design Prototype | https://xd.adobe.com/view/7e8cdd66-8123-469a-ba7e-eae474a20616-2bdf/ |
-| Style Guide      | https://xd.adobe.com/view/572ab52d-9595-4e90-829c-f36b6d78d90b-0279/ |
-| Repository       | https://github.com/andjhay/Auction-Site-Semester-Project-2           |
-| Hosted Demo      | https://andjhay.github.io/Auction-Site-Semester-Project-2/           |
+```
+npm run start
+```
 
-## CSS frameworks
+## Contact
 
-Bootstrap
+[My LinkedIn page](https://www.linkedin.com/in/andrewjameshay/)
 
-## Hosting services
-
-GitHub Pages
-
-## Design applications
-
-Adobe XD
-
-## Planning applications
-
-Trello(Kanban) and TeamGantt (Gantt) a Trello Power-Up feature
-
-## Requirements in the form of User Stories:
+## Project Requirements in the form of User Stories:
 
 - [x] A user with a stud.noroff.no email may register
 - [x] A registered user may login
